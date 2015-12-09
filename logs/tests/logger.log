@@ -1,0 +1,50 @@
+------------------ [ 2015-12-09 03:33:39.259554 ] ------------------ 
+CALL TO: decorated_func in tests.test_logger 
+ **KWARGS: {'y': 5} 
+*ARGS: (50,)
+Method This should be Wrapped
+RETURNED: 100
+
+DONE AT:  2015-12-09 03:33:39.259880 
+-------------------------------- END --------------------------------
+
+
+------------------ [ 2015-12-09 03:35:44.741773 ] ------------------ 
+CALL TO: decorated_func in tests.test_logger 
+**KWARGS:		 {'y': 5} 
+*ARGS:		 (50,)
+Method This should be Wrapped
+RETURNED:		 100
+
+DONE AT:		 2015-12-09 03:35:44.742511 
+-------------------------------- END --------------------------------
+
+
+------------------ [ 2015-12-09 03:36:58.206670 ] ------------------ 
+CALL TO: decorated_func in tests.test_logger 
+**KWARGS:
+	 {'y': 5} 
+*ARGS:
+	 (50,)
+Method This should be Wrapped
+RETURNED:		 100
+
+DONE AT:		 2015-12-09 03:36:58.206939 
+-------------------------------- END --------------------------------
+
+
+------------------ [ 2015-12-09 03:38:16.207929 ] ------------------ 
+CALL TO: decorated_func in tests.test_logger 
+**KWARGS:
+	 {'y': 5} 
+*ARGS:
+	 (50,)
+Method This should be Wrapped
+RETURNED:
+	 100
+
+DONE AT:
+	 2015-12-09 03:38:16.208200 
+-------------------------------- END --------------------------------
+
+

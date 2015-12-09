@@ -14,8 +14,19 @@ import pytz
 import tzlocal
 #from pytz import timezone, all_timezones
 
+from utils.logger import log, Logger
+from . import logfilepath
+
+
+LOG_FILE = 'logger.log'
+
+logger = Logger(filepath = logfilepath(LOG_FILE))
+
+
+
 class WorldClock(object):
 	"""docstring for WorldClock"""
+	
 	def __init__(self, localzone = None, syszone = None):
 		if syszone:
 			self.systz = self.timezone(syszone)
@@ -94,35 +105,4 @@ class WorldClock(object):
 		if dtm == None:
 			dtm = datetime.datetime.now()
 
-		return self.localize(tz, dtm)
-
-
-
-
-home_timezone = 'Africa/Nairobi'
-
-def localized(zone_name, dtm = None):
-	if not dtm:
-		dtm = datetime.datetime.now()
-
-	zone = timezone(zone_name)
-	return zone.localize(dtm)
-
-
-def home_time(dtm = None):
-	athome = localized(home_timezone, dtm)
-	return athome
-
-def time_as_home(dtm):
-	return time_as_zone(home_timezone, dtm)
-
-
-def time_as_zone(zone_name, dtm = None):
-	if zone_name == home_timezone:
-		return home_time(dtm)
-
-	if not dtm:
-		dtm = home_time()
-
-	return dtm.astimezone(timezone(zone_name))
-
+		return self.localize(tz, dtm)-
